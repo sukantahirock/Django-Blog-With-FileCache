@@ -123,24 +123,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # File-based cache setup (for blog app)
-"""CACHES = {
+CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
         'LOCATION': BASE_DIR / 'django_cache',  # cache ফাইল এখানে জমা হবে
     }
-}"""
-
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-        'LOCATION': 'my_cache_table',  # এই নামটাই টেবিল তৈরি হবে
-    }
 }
 
 
-# Optional: If switching to database cache
-# 'default': {
-#     'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-#     'LOCATION': 'my_cache_table',  # আমরা পরে table বানাবো
-# },
 DEBUG = True  # রাখতে হবে যাতে ক্যাশ ভালভাবে কাজ করে ডেভেলপমেন্টে
